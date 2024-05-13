@@ -3,13 +3,13 @@ import { Breadcrumb, Layout, Menu, MenuProps, theme } from 'antd'
 import { MenuKey } from 'constants/menu'
 import { useRouter } from 'next/router'
 
-const { Header, Content, Footer, Sider } = Layout
+const { Header, Content } = Layout
 
 interface CustomLayoutProps {
   children: React.ReactNode
 }
 
-export const CustomLayout = ({ children }: CustomLayoutProps) => {
+const CustomLayout = ({ children }: CustomLayoutProps) => {
   const router = useRouter()
   const {
     token: { colorBgContainer, borderRadiusLG },
@@ -21,10 +21,10 @@ export const CustomLayout = ({ children }: CustomLayoutProps) => {
         router.push('/')
         break
       case 'About':
-        router.push('/about')
+        router.push('/')
         break
       case 'Demo':
-        router.push('/demo')
+        router.push('/')
         break
       default:
         router.push('/')
@@ -68,3 +68,5 @@ export const CustomLayout = ({ children }: CustomLayoutProps) => {
     </Layout>
   )
 }
+
+export default CustomLayout

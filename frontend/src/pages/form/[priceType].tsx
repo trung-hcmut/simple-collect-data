@@ -1,12 +1,10 @@
 import React from 'react'
-import { Formik, Form, Field } from 'formik'
+import { Formik, Field } from 'formik'
 import * as Yup from 'yup'
 import {
   Input,
   Radio,
   Select,
-  DatePicker,
-  InputNumber,
   Checkbox,
   Typography,
   Button,
@@ -40,7 +38,7 @@ const validationSchema = Yup.object().shape({
 })
 
 
-const FormData = () => {
+const FormData: React.FC = () => {
   const router = useRouter()
   const { priceType } = router.query
   console.log('priceType', priceType)
