@@ -8,13 +8,15 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "type": "module",
   "dependencies": {
     "@types/styled-system": "^5.1.22",
     "antd": "^5.17.0",
     "axios": "^1.6.8",
     "dotenv": "^16.4.5",
     "formik": "^2.4.6",
-    "next": "^12.1.5",
+    "next": "^13.1.5",
+    "nodemailer": "^6.9.13",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "styled-components": "^6.1.11",
